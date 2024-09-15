@@ -1,0 +1,5 @@
+format = "TOML"
+name = "config.toml"
+
+[nested]
+title = "TOML file for testing"

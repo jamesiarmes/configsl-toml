@@ -1,0 +1,29 @@
+require:
+  - rubocop-rake
+  - rubocop-rspec
+
+AllCops:
+  NewCops: enable
+  SuggestExtensions: true
+  TargetRubyVersion: 3.2
+
+Metrics/MethodLength:
+  CountAsOne:
+    - array
+    - method_call
+    - hash
+
+# Exclude our main gem include from the file naming convention, to keep it
+# consistent with the gem name.
+Naming/FileName:
+  Exclude:
+    - 'lib/configsl-toml.rb'
+
+RSpec/ExampleLength:
+  CountAsOne:
+    - array
+    - hash
+
+RSpec/SpecFilePathFormat:
+  CustomTransform:
+    ConfigSL: configsl
