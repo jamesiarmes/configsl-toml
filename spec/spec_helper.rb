@@ -2,8 +2,10 @@
 
 # Configure code coverage reporting.
 if ENV.fetch('COVERAGE', false)
+  require 'coveralls'
   require 'simplecov'
 
+  Coveralls.wear!
   SimpleCov.minimum_coverage 95
   SimpleCov.start do
     add_filter '/spec/'
